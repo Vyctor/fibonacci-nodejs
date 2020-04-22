@@ -2,18 +2,12 @@
 
 const fibonacci = () => {
   let contador = 0;
-  let fibonacciNumber = 0;
   let fibonacciArray = [];
 
-  while (true) {
-    fibonacciNumber = fib(contador);
-    if (fibonacciNumber > 14) {
-      break;
-    }
+  while (contador <= 15) {
+    fibonacciArray.push(fib(contador));
     contador++;
-    fibonacciArray.push(fibonacciNumber);
   }
-
   return fibonacciArray;
 };
 
@@ -25,7 +19,7 @@ const fib = (n) => {
 };
 
 const isFibonnaci = (num) => {
-  return fibonacci().includes(num) ? true : false;
+  return fibonacci().includes(num);
 };
 
 module.exports = {
