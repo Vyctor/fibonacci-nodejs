@@ -1,12 +1,12 @@
 "use strict";
 
 const fibonacci = () => {
-  let contador = 0;
+  let index = 0;
   let fibonacciArray = [];
 
-  while (contador <= 15) {
-    fibonacciArray.push(fib(contador));
-    contador++;
+  while (fib(index) <= 350) {
+    fibonacciArray.push(fib(index));
+    index++;
   }
   return fibonacciArray;
 };
@@ -18,9 +18,7 @@ const fib = (n) => {
   return fib(n - 1) + fib(n - 2);
 };
 
-const isFibonnaci = (num) => {
-  return fibonacci().includes(num);
-};
+const isFibonnaci = (num) => fibonacci().includes(num);
 
 module.exports = {
   fibonacci,
